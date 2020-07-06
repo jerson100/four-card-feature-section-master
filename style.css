@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Gray-sh-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body{
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: var(--Very-Light-Gray);
+}
+
+.wrapper{
+    max-width: calc(1050px + 7.6rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    margin-bottom: 5rem;
+    max-width: 580px;
+    margin-top: 5rem;
+}
+
+.header__title{
+    margin-bottom: 1rem;
+    font-size: 1.65em;
+    font-weight: 200;
+    text-align: center;
+}
+
+.header__strong{
+    color: var(--Very-Dark-Blue);
+    display: block;
+    font-weight: 600;
+}
+
+.header__text{
+    color: var(--Gray-sh-Blue);
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.cards__item{
+    position: relative;
+    padding: 1.8rem;
+    border: solid 1px red;
+    max-width: 768px;
+    margin-bottom: 1.8rem;
+    border: solid 1px rgba(0,0,0,.04);
+    border-radius: 10px;
+    box-shadow: 0 25px 25px -2px rgb(223, 231, 242);
+}
+
+.cards__item::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cards__item--color-cyan::after{
+    background-color: var(--Cyan);
+}
+
+.cards__item--color-blue::after{
+    background-color: var(--Blue);
+}
+
+.cards__item--color-orange::after{
+    background-color: var(--Orange);
+}
+
+.cards__item--color-red::after{
+    background-color: var(--Red);
+}
+
+.cards__title{
+    font-size: 1.4em;
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+    margin-bottom: .7rem;
+}
+
+.cards__text{
+    color: var(--Gray-sh-Blue);
+    margin-bottom: 2rem;
+    font-size: .85em;
+    line-height: 2;
+}
+
+.cards__icon-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 1440px){
+
+    .header{
+        margin-top: 0;
+    }
+    
+    .cards__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .cards__item{
+        flex: 0 0 350px;
+    }
+
+    .header__title{
+        font-size: 2.4em;
+    }
+
+    .cards__group{
+        flex: 0 0 350px;
+    }
+
+}
